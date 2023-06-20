@@ -1,4 +1,6 @@
 import React from "react";
+import Head from "./Head";
+import Nav from "./Nav";
 
 // 3. Using Componet
 class City extends React.Component {
@@ -46,8 +48,17 @@ class App extends React.Component {
   render() {
     return (
       // 2. jsx
-      <>
-      <h1>Hello World</h1>
+      <div style={{padding: 10}}>
+      <Nav>
+        <h3 style={{background: "yellow", padding: 20}}>WYH</h3>
+      </Nav>
+
+      <Head>
+        <h1>Hello React</h1>
+        <p>This is my new course Compent Compositon</p>
+        <h4>20.6.2023</h4>
+      </Head>
+
       <input type="text" ref={this.nameRef} placeholder="Enter city name..."/>
       <input type="text" ref={this.regionRef} placeholder="Enter region..."/>
       <input type="text" ref={this.areaRef} placeholder="Enter area..."/>
@@ -59,7 +70,7 @@ class App extends React.Component {
             return <City key={c.id} name={c.name} region={c.region} area={c.area}/>
           })}
         </ol>
-      </>
+      </div>
     )
   }
 }
