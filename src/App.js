@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "./Head";
-import Nav from "./Nav";
-
+import Navbar from "./Navbar";
 // 3. Using Componet
 class City extends React.Component {
   render() {
@@ -46,19 +45,33 @@ class App extends React.Component {
   }
 
   render() {
+
+    // 12.Css in Js
+    const styles = {
+      bb: {
+        textAlign: "center",
+        fontSize: 90,
+      }
+    }
+
     return (
       // 2. jsx
-      <div style={{padding: 10}}>
-      <Nav>
-        <h3 style={{background: "yellow", padding: 20}}>WYH</h3>
-      </Nav>
+      <div>
+      
+      <Navbar>
+        {/* 11.Modules Css */}
+        <h3>Nav bar</h3>
+      </Navbar>
 
       <Head>
+        {/* 11.Modules Css */}
         <h1>Hello React</h1>
         <p>This is my new course Compent Compositon</p>
         <h4>20.6.2023</h4>
       </Head>
 
+      
+      <div style={styles.bb}>
       <input type="text" ref={this.nameRef} placeholder="Enter city name..."/>
       <input type="text" ref={this.regionRef} placeholder="Enter region..."/>
       <input type="text" ref={this.areaRef} placeholder="Enter area..."/>
@@ -70,6 +83,7 @@ class App extends React.Component {
             return <City key={c.id} name={c.name} region={c.region} area={c.area}/>
           })}
         </ol>
+      </div>
       </div>
     )
   }
