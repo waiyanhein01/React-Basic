@@ -1,0 +1,17 @@
+.Background {
+  background-color: #150db5;
+  color: #f0f0f7;
+  border: 1px solid;
+  border-radius: 40px;
+}
+.Background:hover {
+  background-color: #9c050c;
+  color: #0c0c0d;
+}
+
+.Text {
+  color: #9c050c;
+  border: 1px solid #0c0c0d;
+}
+
+/*# sourceMappingURL=cus.css.map */

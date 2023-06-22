@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "./Head";
 import Navbar from "./Navbar";
+import "./cus/css/cus.css"
 // 3. Using Componet
 class City extends React.Component {
   render() {
@@ -50,7 +51,7 @@ class App extends React.Component {
     const styles = {
       bb: {
         textAlign: "center",
-        fontSize: 90,
+        fontSize: 30,
       }
     }
 
@@ -76,7 +77,8 @@ class App extends React.Component {
       <input type="text" ref={this.regionRef} placeholder="Enter region..."/>
       <input type="text" ref={this.areaRef} placeholder="Enter area..."/>
 
-      <button onClick={this.add}>Add New City</button>
+      <button className="Background" onClick={this.add}>Add New City</button>
+      <h1 className="Text">Add your favourite city!</h1>
         <ol>
           {this.state.cities.map( c => {
             // 7. Using key does not cause errors 

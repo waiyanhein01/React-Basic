@@ -1,0 +1,24 @@
+// 13.sass
+$primary   : #150db5;
+$secondary : #999495;
+$warning   : #9c9905;
+$success   : #0db531;
+$danger    : #9c050c;
+$white     : #f0f0f7;
+$black     : #0c0c0d;
+
+.Background {
+    background-color: $primary;
+    color: $white;
+    border: 1px solid;
+    border-radius: 40px;
+    &:hover {
+        background-color: $danger;
+        color: $black;
+    }
+}
+
+.Text {
+    color: $danger;
+    border: 1px solid $black;
+}
